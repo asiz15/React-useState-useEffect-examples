@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Counter } from "./Counter";
+import { BlogPosts } from "./BlogPosts";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
@@ -9,7 +10,7 @@ const Home = () => {
 	const [counter, setCounter] = useState(33);
 	return (
 		<div className="text-center mt-5">
-			<Counter from={counter}></Counter>
+			<BlogPosts></BlogPosts>
 		</div>
 	);
 };

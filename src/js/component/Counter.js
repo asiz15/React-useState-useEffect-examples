@@ -25,7 +25,10 @@ export const Counter = ({ from }) => {
 	useEffect(() => {
 		console.log("This will be printed only if 'counter' changes");
 		const timer = counter > 0 && setInterval(() => decrease(), 1000);
-		return () => clearInterval(timer);
+		return () => {
+			clearInterval(timer);
+			console.log("cleanup!!");
+		};
 	}, [counter]);
 
 	useEffect(() => {
